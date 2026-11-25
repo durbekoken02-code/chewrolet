@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chevrolet Official Lineup | Cars, Trucks, SUVs & EVs</title>
+  <meta name="description" content="Explore official Chevrolet vehicles: Corvette, Silverado, Tahoe, Suburban, Blazer EV, and more. Realistic pricing in USD, vehicle configurator, and financing calculator.">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 40'%3E%3Cpolygon points='0,12 32,12 38,0 62,0 68,12 100,12 100,28 68,28 62,40 38,40 32,28 0,28' fill='%23d4af37' stroke='%23f5d77f' stroke-width='2'/%3E%3C/svg%3E">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons for clean automotive UI -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-bar">
+    <div class="container top-bar-content">
+      <div class="top-info">
+        <span class="badge-pill">2025 LINEUP</span>
+        <span>All vehicle pricing shown in <strong>USD ($)</strong> MSRP. Only authentic Chevrolet models.</span>
+      </div>
+      <div class="top-links">
+        <a href="#calculator"><i class="fa-solid fa-calculator"></i> Payment Estimator</a>
+        <a href="#test-drive" id="top-test-drive-btn"><i class="fa-solid fa-calendar-check"></i> Book Test Drive</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Navigation Header -->
+  <header class="site-header" id="header">
+    <div class="container header-container">
+      <!-- Chevrolet Bowtie Logo -->
+      <a href="#hero" class="brand-logo" aria-label="Chevrolet Home">
+        <svg class="bowtie-icon" viewBox="0 0 100 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <polygon points="2,13 33,13 38,2 62,2 67,13 98,13 98,27 67,27 62,38 38,38 33,27 2,27" fill="url(#chevyGold)" stroke="#d4af37" stroke-width="1.5"/>
+          <polygon points="5,15 34,15 39,5 61,5 66,15 95,15 95,25 66,25 61,35 39,35 34,25 5,25" fill="url(#chevyInner)" opacity="0.9"/>
+          <defs>
+            <linearGradient id="chevyGold" x1="0" y1="0" x2="100" y2="40" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#fdf2bb"/>
+              <stop offset="0.5" stop-color="#d4af37"/>
+              <stop offset="1" stop-color="#8a691e"/>
+            </linearGradient>
+            <linearGradient id="chevyInner" x1="0" y1="0" x2="100" y2="40" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#fff8d6"/>
+              <stop offset="0.3" stop-color="#e3be47"/>
+              <stop offset="1" stop-color="#9d741c"/>
+            </linearGradient>
+          </defs>
+        </svg>
+        <span class="brand-name">CHEVROLET</span>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="nav-menu" id="nav-menu">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#vehicles" class="nav-link" data-filter="all">All Vehicles</a></li>
+          <li class="nav-item"><a href="#vehicles" class="nav-link" data-filter="suv">SUVs & Crossovers</a></li>
+          <li class="nav-item"><a href="#vehicles" class="nav-link" data-filter="truck">Trucks</a></li>
+          <li class="nav-item"><a href="#vehicles" class="nav-link" data-filter="performance">Performance</a></li>
+          <li class="nav-item"><a href="#vehicles" class="nav-link" data-filter="ev">Electric (EV)</a></li>
+          <li class="nav-item"><a href="#calculator" class="nav-link">Payment Tool</a></li>
+          <li class="nav-item"><a href="#innovations" class="nav-link">Technology</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Action Controls -->
+      <div class="header-actions">
+        <button class="btn btn-outline" id="quick-build-nav-btn">
+          <i class="fa-solid fa-sliders"></i> Build & Price
+        </button>
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Showcase Section -->
+    <section class="hero-section" id="hero">
+      <div class="hero-bg-overlay"></div>
+      <div class="container hero-content">
+        <div class="hero-text-block">
+          <div class="hero-badge">
+            <i class="fa-solid fa-bolt"></i> 2025 CHEVROLET CORVETTE Z06
+          </div>
+          <h1 class="hero-title">ENGINEERED TO THRILL.<br>DESIGNED TO CONQUER.</h1>
+          <p class="hero-subtitle">
+            Experience the 670-horsepower naturally aspirated mid-engine American supercar. Starting at <strong>$112,700 MSRP</strong>.
+          </p>
+          <div class="hero-cta-group">
+            <a href="#vehicles" class="btn btn-gold btn-lg"><i class="fa-solid fa-car-side"></i> Explore All Models</a>
+            <button class="btn btn-glass btn-lg" onclick="openBuildModal('corvette_z06')">
+              <i class="fa-solid fa-screwdriver-wrench"></i> Build & Price
+            </button>
+            <a href="#calculator" class="btn btn-outline-light btn-lg">
+              <i class="fa-solid fa-coins"></i> Financing Calculator
+            </a>
+          </div>
+
+          <!-- Hero Metrics Bar -->
+          <div class="hero-metrics">
+            <div class="metric-card">
+              <span class="metric-number">670</span>
+              <span class="metric-unit">HP</span>
+              <span class="metric-label">Hand-built 5.5L V8</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-number">2.6s</span>
+              <span class="metric-unit">0-60 MPH</span>
+              <span class="metric-label">Supercar Acceleration</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-number">$21,495</span>
+              <span class="metric-unit">USD</span>
+              <span class="metric-label">Lineup Starting MSRP</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-number">100%</span>
+              <span class="metric-unit">GENUINE</span>
+              <span class="metric-label">Chevrolet Heritage</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Vehicle Filter & Search Section -->
+    <section class="vehicles-section" id="vehicles">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-tag">OFFICIAL 2025 SHOWROOM</span>
+          <h2 class="section-title">CHEVROLET VEHICLE LINEUP</h2>
+          <p class="section-desc">
+            Explore authentic Chevrolet vehicles. All prices displayed in official US Dollars (USD). No third-party models.
+          </p>
+        </div>
+
+        <!-- Filter Controls Bar -->
+        <div class="filter-controls-wrapper">
+          
+          <!-- Category Tabs -->
+          <div class="category-tabs" id="category-tabs">
+            <button class="tab-btn active" data-category="all">
+              <i class="fa-solid fa-border-all"></i> All Models <span class="tab-count" id="count-all">12</span>
+            </button>
+            <button class="tab-btn" data-category="suv">
+              <i class="fa-solid fa-truck-monster"></i> SUVs & Crossovers <span class="tab-count" id="count-suv">5</span>
+            </button>
+            <button class="tab-btn" data-category="truck">
+              <i class="fa-solid fa-truck-pickup"></i> Trucks <span class="tab-count" id="count-truck">3</span>
+            </button>
+            <button class="tab-btn" data-category="performance">
+              <i class="fa-solid fa-gauge-high"></i> Performance <span class="tab-count" id="count-performance">2</span>
+            </button>
+            <button class="tab-btn" data-category="ev">
+              <i class="fa-solid fa-bolt-lightning"></i> Electric (EV) <span class="tab-count" id="count-ev">3</span>
+            </button>
+          </div>
+
+          <!-- Search & Sort Row -->
+          <div class="filter-actions-row">
+            <div class="search-input-box">
+              <i class="fa-solid fa-magnifying-glass search-icon"></i>
+              <input type="text" id="car-search-input" placeholder="Search Chevrolet models (e.g. Corvette, Tahoe, Silverado, Trax)..." autocomplete="off">
+              <button class="clear-search-btn" id="clear-search-btn" aria-label="Clear search" style="display: none;">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+            </div>
+
+            <div class="sort-selector-box">
+              <label for="car-sort-select"><i class="fa-solid fa-arrow-down-short-wide"></i> Sort:</label>
+              <select id="car-sort-select">
+                <option value="featured">Featured Order</option>
+                <option value="price-asc">Price: Low to High ($)</option>
+                <option value="price-desc">Price: High to Low ($)</option>
+                <option value="hp-desc">Horsepower: High to Low</option>
+                <option value="name-asc">Model: A to Z</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Active Filter Indicator -->
+        <div class="active-filter-status" id="filter-status-text">
+          Showing <strong id="visible-count">12</strong> authentic Chevrolet vehicles
+        </div>
+
+        <!-- Vehicle Cards Grid (Rendered Dynamically by JS) -->
+        <div class="vehicles-grid" id="vehicles-grid">
+          <!-- Populated by JavaScript -->
+        </div>
+
+        <!-- No Results Fallback -->
+        <div class="no-results-box" id="no-results" style="display: none;">
+          <i class="fa-solid fa-car-tunnel no-results-icon"></i>
+          <h3>No Chevrolet vehicles found matching your search.</h3>
+          <p>Please try searching for names like "Silverado", "Corvette", "Tahoe", or clear the filter.</p>
+          <button class="btn btn-gold" id="reset-filters-btn">Reset All Filters</button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Interactive Payment & Financing Calculator -->
+    <section class="calculator-section" id="calculator">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-tag">CHEVROLET FINANCIAL SERVICES</span>
+          <h2 class="section-title">PAYMENT & FINANCING ESTIMATOR</h2>
+          <p class="section-desc">
+            Calculate your estimated monthly payment in USD ($) based on real Chevrolet MSRP pricing, your down payment, and loan terms.
+          </p>
+        </div>
+
+        <div class="calculator-layout">
+          
+          <!-- Input Controls Form -->
+          <div class="calc-form-card">
+            <h3 class="calc-card-title"><i class="fa-solid fa-calculator"></i> Customize Your Terms</h3>
+
+            <!-- Vehicle Selection Dropdown -->
+            <div class="calc-field-group">
+              <label for="calc-car-select">Select Chevrolet Model:</label>
+              <div class="select-wrapper">
+                <select id="calc-car-select">
+                  <!-- Injected via JavaScript from Chevy models list -->
+                </select>
+              </div>
+            </div>
+
+            <!-- Vehicle Price Input & Slider -->
+            <div class="calc-field-group">
+              <div class="slider-header">
+                <label for="calc-price-input">Vehicle Price (USD):</label>
+                <div class="input-currency-wrapper">
+                  <span class="currency-symbol">$</span>
+                  <input type="number" id="calc-price-input" min="15000" max="180000" step="500" value="68300">
+                </div>
+              </div>
+              <input type="range" class="calc-range-slider" id="calc-price-slider" min="15000" max="180000" step="500" value="68300">
+            </div>
+
+            <!-- Down Payment Input & Slider -->
+            <div class="calc-field-group">
+              <div class="slider-header">
+                <label for="calc-down-input">Down Payment (USD):</label>
+                <div class="input-currency-wrapper">
+                  <span class="currency-symbol">$</span>
+                  <input type="number" id="calc-down-input" min="0" max="80000" step="500" value="10000">
+                </div>
+              </div>
+              <input type="range" class="calc-range-slider" id="calc-down-slider" min="0" max="80000" step="500" value="10000">
+            </div>
+
+            <!-- Trade-in Value -->
+            <div class="calc-field-group">
+              <div class="slider-header">
+                <label for="calc-trade-input">Estimated Trade-In Value (USD):</label>
+                <div class="input-currency-wrapper">
+                  <span class="currency-symbol">$</span>
+                  <input type="number" id="calc-trade-input" min="0" max="50000" step="500" value="2500">
+                </div>
+              </div>
+            </div>
+
+            <!-- Loan Term Selector (Months) -->
+            <div class="calc-field-group">
+              <label>Financing Term (Months):</label>
+              <div class="term-buttons-group" id="term-buttons">
+                <button type="button" class="term-btn" data-term="36">36 Mos</button>
+                <button type="button" class="term-btn" data-term="48">48 Mos</button>
+                <button type="button" class="term-btn active" data-term="60">60 Mos</button>
+                <button type="button" class="term-btn" data-term="72">72 Mos</button>
+              </div>
+            </div>
+
+            <!-- Estimated APR / Interest Rate -->
+            <div class="calc-field-group">
+              <div class="slider-header">
+                <label for="calc-apr-input">Estimated Annual Percentage Rate (APR %):</label>
+                <div class="input-currency-wrapper">
+                  <input type="number" id="calc-apr-input" min="0.9" max="15.0" step="0.1" value="5.9">
+                  <span class="currency-unit">%</span>
+                </div>
+              </div>
+              <input type="range" class="calc-range-slider" id="calc-apr-slider" min="0.9" max="15.0" step="0.1" value="5.9">
+            </div>
+
+          </div>
+
+          <!-- Result Preview Summary Card -->
+          <div class="calc-result-card">
+            <div class="calc-result-header">
+              <span class="result-badge">ESTIMATED PAYMENT</span>
+              <div class="monthly-payment-display">
+                <span class="price-dollar">$</span>
+                <span class="price-value" id="res-monthly-payment">1,085</span>
+                <span class="price-period">/ month</span>
+              </div>
+              <p class="result-note">Based on <span id="res-term-display">60</span>-month term at <span id="res-apr-display">5.9%</span> APR</p>
+            </div>
+
+            <div class="calc-breakdown-list">
+              <div class="breakdown-row">
+                <span>Vehicle Price (MSRP):</span>
+                <strong id="res-car-price">$68,300</strong>
+              </div>
+              <div class="breakdown-row">
+                <span>Total Down & Trade-In:</span>
+                <strong class="text-green" id="res-down-total">-$12,500</strong>
+              </div>
+              <div class="breakdown-row">
+                <span>Total Loan Amount:</span>
+                <strong id="res-loan-amount">$55,800</strong>
+              </div>
+              <div class="breakdown-row">
+                <span>Estimated Total Interest:</span>
+                <strong id="res-total-interest">$8,784</strong>
+              </div>
+              <div class="breakdown-row total-row">
+                <span>Total Payment Over Term:</span>
+                <strong class="text-gold" id="res-total-paid">$64,584</strong>
+              </div>
+            </div>
+
+            <div class="calc-cta-group">
+              <button class="btn btn-gold btn-block" id="calc-apply-btn">
+                <i class="fa-solid fa-file-signature"></i> Apply for Pre-Approval
+              </button>
+              <button class="btn btn-outline-light btn-block" id="calc-test-drive-btn">
+                <i class="fa-solid fa-calendar-check"></i> Test Drive This Vehicle
+              </button>
+            </div>
+
+            <div class="calc-disclaimer">
+              <i class="fa-solid fa-circle-info"></i> Estimated payments are for illustrative purposes only. Tax, title, license, and dealer fees are extra. Actual dealer prices and rates may vary.
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Chevrolet Innovation & Technologies Section -->
+    <section class="innovations-section" id="innovations">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-tag">ADVANCED AUTOMOTIVE ENGINEERING</span>
+          <h2 class="section-title">THE CHEVROLET ADVANTAGE</h2>
+          <p class="section-desc">
+            Pioneering hands-free driving, next-generation electric battery architecture, and active safety systems.
+          </p>
+        </div>
+
+        <div class="innovations-grid">
+          
+          <div class="innovation-card">
+            <div class="card-icon-wrapper">
+              <i class="fa-solid fa-compass"></i>
+            </div>
+            <h3 class="card-title">Super Cruise™</h3>
+            <p class="card-text">
+              The industry's first true hands-free driver assistance technology for compatible highways. Over 400,000 miles of mapped roads across North America.
+            </p>
+            <ul class="card-features-list">
+              <li><i class="fa-solid fa-check"></i> Automatic Lane Change</li>
+              <li><i class="fa-solid fa-check"></i> Trailering Compatibility on Trucks</li>
+              <li><i class="fa-solid fa-check"></i> Driver Attention Monitoring</li>
+            </ul>
+          </div>
+
+          <div class="innovation-card highlight-card">
+            <div class="card-icon-wrapper gold-icon">
+              <i class="fa-solid fa-car-battery"></i>
+            </div>
+            <h3 class="card-title">Ultium EV Platform</h3>
+            <p class="card-text">
+              GM's proprietary modular electric vehicle platform delivering exceptional range, power, and ultra-fast DC charging on Silverado EV, Blazer EV, and Equinox EV.
+            </p>
+            <ul class="card-features-list">
+              <li><i class="fa-solid fa-check"></i> Up to 440 Miles Range (Silverado EV)</li>
+              <li><i class="fa-solid fa-check"></i> 800V DC Fast Charging Available</li>
+              <li><i class="fa-solid fa-check"></i> Near 50/50 Weight Distribution</li>
+            </ul>
+          </div>
+
+          <div class="innovation-card">
+            <div class="card-icon-wrapper">
+              <i class="fa-solid fa-shield-halved"></i>
+            </div>
+            <h3 class="card-title">Chevy Safety Assist</h3>
+            <p class="card-text">
+              Standard on almost all 2025 Chevrolet vehicles, this suite of six active safety and driver assistance technologies provides 360-degree peace of mind.
+            </p>
+            <ul class="card-features-list">
+              <li><i class="fa-solid fa-check"></i> Automatic Emergency Braking</li>
+              <li><i class="fa-solid fa-check"></i> Lane Keep Assist with Warning</li>
+              <li><i class="fa-solid fa-check"></i> IntelliBeam® Auto High Beams</li>
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== MODALS ==================== -->
+
+  <!-- 1. BUILD & PRICE CONFIGURATOR MODAL -->
+  <div class="modal-backdrop" id="build-modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <span class="modal-badge"><i class="fa-solid fa-sliders"></i> LIVE CONFIGURATOR</span>
+          <h3 class="modal-title" id="build-modal-title">Chevrolet Corvette Z06</h3>
+        </div>
+        <button class="modal-close-btn" onclick="closeBuildModal()" aria-label="Close modal">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <div class="modal-body build-modal-body">
+        
+        <!-- Left: Vehicle Preview Image & Selected Specs -->
+        <div class="build-preview-column">
+          <div class="build-image-wrapper">
+            <img src="" alt="Chevrolet vehicle preview" id="build-preview-img" class="build-image" onerror="handleImageError(this)">
+            <div class="build-color-badge" id="build-color-badge">Torch Red</div>
+          </div>
+          <div class="build-specs-pill-row">
+            <div class="spec-pill"><i class="fa-solid fa-bolt"></i> <span id="build-hp-display">670 HP</span></div>
+            <div class="spec-pill"><i class="fa-solid fa-gauge"></i> <span id="build-engine-display">5.5L V8</span></div>
+            <div class="spec-pill"><i class="fa-solid fa-gas-pump"></i> <span id="build-fuel-display">12/19 MPG</span></div>
+          </div>
+        </div>
+
+        <!-- Right: Options Configuration -->
+        <div class="build-options-column">
+          
+          <!-- Trim Selection -->
+          <div class="option-group">
+            <label class="option-group-label">1. Choose Trim Level:</label>
+            <div class="trim-options-list" id="build-trims-container">
+              <!-- Dynamically populated -->
+            </div>
+          </div>
+
+          <!-- Color Swatches Selection -->
+          <div class="option-group">
+            <label class="option-group-label">2. Exterior Color:</label>
+            <div class="color-swatches-row" id="build-colors-container">
+              <!-- Dynamically populated -->
+            </div>
+            <span class="selected-color-name" id="selected-color-name">Color: Torch Red (Included)</span>
+          </div>
+
+          <!-- Optional Packages -->
+          <div class="option-group">
+            <label class="option-group-label">3. Performance & Interior Packages:</label>
+            <div class="packages-list" id="build-packages-container">
+              <!-- Dynamically populated -->
+            </div>
+          </div>
+
+          <!-- Price Summary Calculation (USD) -->
+          <div class="build-price-box">
+            <div class="price-breakdown-subrow">
+              <span>Base MSRP:</span>
+              <span id="build-base-price">$112,700</span>
+            </div>
+            <div class="price-breakdown-subrow">
+              <span>Selected Trim & Color:</span>
+              <span id="build-trim-price">+$0</span>
+            </div>
+            <div class="price-breakdown-subrow">
+              <span>Selected Packages:</span>
+              <span id="build-pack-price">+$0</span>
+            </div>
+            <div class="price-total-row">
+              <span>TOTAL ESTIMATED MSRP (USD):</span>
+              <strong class="total-usd-amount" id="build-total-price">$112,700</strong>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn btn-outline" onclick="closeBuildModal()">Close</button>
+        <button class="btn btn-gold" id="save-build-btn">
+          <i class="fa-solid fa-bookmark"></i> Save My Build ($<span id="save-btn-price">112,700</span>)
+        </button>
+        <button class="btn btn-primary-blue" id="build-to-testdrive-btn">
+          <i class="fa-solid fa-calendar-check"></i> Book Test Drive
+        </button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- 2. QUICK SPECS MODAL -->
+  <div class="modal-backdrop" id="specs-modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <span class="modal-badge"><i class="fa-solid fa-list-check"></i> FULL VEHICLE SPECIFICATIONS</span>
+          <h3 class="modal-title" id="specs-modal-title">Chevrolet Model Specs</h3>
+        </div>
+        <button class="modal-close-btn" onclick="closeSpecsModal()" aria-label="Close modal">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <div class="modal-body" id="specs-modal-body">
+        <!-- Rendered by JavaScript -->
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn btn-outline" onclick="closeSpecsModal()">Close</button>
+        <button class="btn btn-gold" id="specs-to-build-btn">
+          <i class="fa-solid fa-sliders"></i> Build & Price This Vehicle
+        </button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- 3. SCHEDULE TEST DRIVE MODAL -->
+  <div class="modal-backdrop" id="testdrive-modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <span class="modal-badge"><i class="fa-solid fa-calendar-check"></i> CHEVROLET TEST DRIVE</span>
+          <h3 class="modal-title">Schedule Your Test Drive</h3>
+        </div>
+        <button class="modal-close-btn" onclick="closeTestDriveModal()" aria-label="Close modal">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <form id="test-drive-form" class="modal-body">
+        <div class="form-field">
+          <label for="td-vehicle-select">Select Chevrolet Vehicle *</label>
+          <select id="td-vehicle-select" required>
+            <!-- Populated via JS -->
+          </select>
+        </div>
+
+        <div class="form-row">
+          <div class="form-field">
+            <label for="td-date-input">Preferred Date *</label>
+            <input type="date" id="td-date-input" required>
+          </div>
+          <div class="form-field">
+            <label for="td-time-select">Preferred Time *</label>
+            <select id="td-time-select" required>
+              <option value="10:00 AM">10:00 AM</option>
+              <option value="12:00 PM">12:00 PM</option>
+              <option value="02:00 PM" selected>02:00 PM</option>
+              <option value="04:00 PM">04:00 PM</option>
+              <option value="06:00 PM">06:00 PM</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-field">
+          <label for="td-name-input">Full Name *</label>
+          <input type="text" id="td-name-input" placeholder="e.g. John Doe" required>
+        </div>
+
+        <div class="form-row">
+          <div class="form-field">
+            <label for="td-phone-input">Phone Number *</label>
+            <input type="tel" id="td-phone-input" placeholder="+1 (555) 000-0000" required>
+          </div>
+          <div class="form-field">
+            <label for="td-email-input">Email Address *</label>
+            <input type="email" id="td-email-input" placeholder="name@example.com" required>
+          </div>
+        </div>
+
+        <div class="form-field">
+          <label for="td-notes-input">Special Inquiries or Preferred Trim</label>
+          <textarea id="td-notes-input" rows="2" placeholder="Tell us if you want to test specific features like Super Cruise or Z51 package..."></textarea>
+        </div>
+
+        <div class="form-notice">
+          <i class="fa-solid fa-lock"></i> Your information is secure. A certified Chevrolet dealer specialist will contact you to confirm appointment.
+        </div>
+
+        <div class="modal-footer" style="padding: 15px 0 0; margin-top: 15px; border-top: 1px solid rgba(255,255,255,0.1);">
+          <button type="button" class="btn btn-outline" onclick="closeTestDriveModal()">Cancel</button>
+          <button type="submit" class="btn btn-gold">
+            <i class="fa-solid fa-paper-plane"></i> Confirm Reservation
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Toast Notification System -->
+  <div class="toast-container" id="toast-container" aria-live="polite"></div>
+
+  <!-- Official Chevrolet Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      
+      <div class="footer-top-row">
+        
+        <div class="footer-col brand-col">
+          <div class="footer-logo">
+            <svg class="bowtie-icon-sm" viewBox="0 0 100 40" fill="none">
+              <polygon points="2,13 33,13 38,2 62,2 67,13 98,13 98,27 67,27 62,38 38,38 33,27 2,27" fill="#d4af37"/>
+            </svg>
+            <span class="brand-title">CHEVROLET</span>
+          </div>
+          <p class="footer-motto">FIND NEW ROADS™</p>
+          <p class="footer-about">
+            Chevrolet is a world-renowned American automobile division of General Motors (GM). Designed with legendary performance, cutting-edge electric mobility, and rugged durability.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Vehicle Categories</h4>
+          <ul class="footer-links">
+            <li><a href="#vehicles" onclick="setCategoryFilter('performance')">Performance (Corvette, Camaro)</a></li>
+            <li><a href="#vehicles" onclick="setCategoryFilter('truck')">Trucks (Silverado 1500, Colorado)</a></li>
+            <li><a href="#vehicles" onclick="setCategoryFilter('suv')">SUVs (Tahoe, Suburban, Blazer, Trax)</a></li>
+            <li><a href="#vehicles" onclick="setCategoryFilter('ev')">Electric (Silverado EV, Blazer EV)</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Shopping Tools</h4>
+          <ul class="footer-links">
+            <li><a href="#calculator">Financing & Payment Estimator ($)</a></li>
+            <li><a href="javascript:void(0)" onclick="openBuildModal('corvette_z06')">Build & Price Configurator</a></li>
+            <li><a href="javascript:void(0)" onclick="openTestDriveModal()">Schedule a Dealership Test Drive</a></li>
+            <li><a href="#innovations">Super Cruise & Ultium Technology</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Support & Pricing</h4>
+          <div class="currency-guarantee-box">
+            <i class="fa-solid fa-dollar-sign text-gold"></i>
+            <div>
+              <strong>Official USD ($) MSRP</strong>
+              <p>Prices exclude tax, title, license, dealer fees, and optional equipment.</p>
+            </div>
+          </div>
+          <div class="chevy-phone">
+            <i class="fa-solid fa-phone"></i> 1-800-222-1020 (GM Support)
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom-row">
+        <p class="copyright-text">
+          &copy; 2025 General Motors. All rights reserved. Chevrolet, Corvette, Silverado, Tahoe, Suburban, Blazer, Equinox, and the Bowtie emblem are registered trademarks of General Motors LLC.
+        </p>
+        <div class="legal-links">
+          <a href="#">Privacy Statement</a>
+          <a href="#">Terms of Use</a>
+          <a href="#">Copyright & Trademark</a>
+          <a href="#">User Guidelines</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Main JavaScript File -->
+  <script src="script.js"></script>
+</body>
+</html>
